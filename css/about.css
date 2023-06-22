@@ -1,5 +1,5 @@
 .container {
-    max-width: 800px;
+    max-width: 1060px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -13,12 +13,16 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    width: 1135px;
+    padding-right: 0px;
+    margin-right: 0px;
   }
   
-  img {
-    width: 200px;
+  #img1 {
+    width: 474px;
     height: auto;
-    margin-right: 20px;
+    margin-right: 0px;
+    padding-right: 118px;
   }
   
   p {
