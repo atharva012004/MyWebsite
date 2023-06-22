@@ -22,14 +22,17 @@
   }
   
   #gif {
-    width: 474px;
+    width: 407px;
     height: auto;
-    margin-right: 0px;
+    margin-right: 80px;
     padding-right: 118px;
-    border-radius: 0%;
-    
-  }
+    border-radius: 90%;
+}
   
   p {
     font-size: 18px;
+    padding-left: 80px;
+  }
+  #head {
+    padding-left: 8%;
   }
