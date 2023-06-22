@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/about.css">
   <link rel="stylesheet" href="../css/skills.css">
   <link rel="stylesheet" href="../css/qualification.css">
+  <link rel="stylesheet" href="../css/dark.css">
 
   <!-- Custom CSS -->
   <style>
@@ -27,13 +28,20 @@
     }
 
     .navbar-expand-lg{
-      padding-right: 260px;
+      padding-right: 15px;
     }
 
     .contactcontainer {
     max-width: 641px;
     margin: 0 auto;
     padding: 20px;}
+
+    body.dark-mode .navbar a {
+    color: #191414;
+}
+.navbar-light .navbar-brand {
+    color: rgba(12, 10, 10, 0.9);
+}
 
     .footcontainer {
       width: 100%;
@@ -68,6 +76,18 @@
         </li>
         <li class="itemnav">
           <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="#"></a>
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">night</button>
+  </nav>
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+    }
+  </script>
         </li>
       </ul>
     </div>
