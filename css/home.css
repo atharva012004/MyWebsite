@@ -1,0 +1,35 @@
+.homecontainer {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .myself {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 1135px;
+    padding-right: 0px;
+    margin-right: 0px;
+    flex-direction: row-reverse;
+    align-content: center;
+
+  }
+  
+  #gif {
+    width: 474px;
+    height: auto;
+    margin-right: 0px;
+    padding-right: 118px;
+    border-radius: 0%;
+    
+  }
+  
+  p {
+    font-size: 18px;
+  }
