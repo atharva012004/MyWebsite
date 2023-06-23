@@ -7,11 +7,11 @@
   <title>Atharva Shihurkar</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/about.css">
+  <!-- <link rel="stylesheet" href="../css/about.css">
   <link rel="stylesheet" href="../css/skills.css">
   <link rel="stylesheet" href="../css/qualification.css">
   <link rel="stylesheet" href="../css/dark.css">
-  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/home.css"> -->
 
   <!-- Custom CSS -->
   <style>
@@ -48,6 +48,330 @@
       color: rgba(7, 4, 4, 0.9);
       margin-left: 260px;
     }
+
+    /* css for dark button */
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+      transition: background-color 0.5s ease;
+    }
+    
+    .navbar {
+      background-color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+    
+    .navbar .dark-mode-btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    
+    .navbar .dark-mode-btn:hover {
+      background-color: #555;
+    }
+    
+    /* Dark Mode */
+    body.dark-mode {
+      background-color: #222;
+      color: #fff;
+    }
+    
+    body.dark-mode .navbar {
+      background-color: #333;
+    }
+    
+    body.dark-mode .navbar a {
+      color: #fff;
+    }
+    
+    body.dark-mode .navbar .dark-mode-btn {
+      background-color: #fff;
+      color: #333;
+    }
+    
+    body.dark-mode .navbar .dark-mode-btn:hover {
+      background-color: #ccc;
+    }
+
+    /* css for home */
+    .homecontainer {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 140px;
+    margin-bottom: 135px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .myself {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 1135px;
+    padding-right: 0px;
+    margin-right: 0px;
+    flex-direction: row-reverse;
+    align-content: center;
+
+  }
+  
+  #gif {
+    width: 407px;
+    height: auto;
+    margin-right: 80px;
+    padding-right: 118px;
+    border-radius: 90%;
+}
+  
+  #p1 {
+    font-size: 18px;
+    padding-left: 80px;
+  }
+  #head {
+    padding-left: 8%;
+  }
+
+  /* css for about */
+
+  .container {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 50px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 20px;
+    width: 1135px;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+  
+  #img1 {
+    width: 474px;
+    height: auto;
+    margin-right: 0px;
+    padding-right: 118px;
+    border-radius: 0%;
+    
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  /* css for skills */
+
+  .skills section {
+    margin-bottom: 20px;
+    text-align: center;
+
+  }
+  
+  .skills-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skill-name {
+    display: inline-block;
+    width: 100px;
+  }
+  
+  .skill-bar {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    height: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  
+  .skill-level {
+    background-color: #4CAF50;
+    height: 100%;
+  }
+  .img-icon{
+  height: 40px;
+  width: 40px;
+}
+
+.pandas-icon{
+  height: 40px;
+  width: 60px;
+}
+
+.skills_container {
+  row-gap: 0;
+}
+
+.skills_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2-5);
+  cursor: pointer;
+}
+
+.skills_icon,
+.skills_arrow {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--first-color);
+}
+
+.skills_icon {
+  margin-right: var(--mb-0-75);
+}
+
+#skills_title {
+  font-size: 155%;
+  text-align: center;
+  margin-left: 33%;
+  padding-top:0%;
+}
+#skills_title1 {
+  font-size: 155%;
+  text-align: center;
+  margin-left: 0%;
+  padding-top:60px;
+}
+#skills_title2 {
+  font-size:155%;
+  text-align: center;
+  margin-left: 0%;
+  padding-top: 60px;
+    margin-bottom: 0px;
+}
+
+.skills_subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  text-align: center;
+  margin-left: 0%;
+  position: center;
+}
+
+.skills_arrow {
+  margin-left: auto;
+  transition: 0.4s;
+}
+
+.skills_list {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+
+.skills_titles {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: var(--mb-0-5); */
+  padding-top: 4%;
+  padding-right: 10px;
+}
+
+.skills_name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.single_skill_icon {
+  color: var(--first-color);
+  font-size: var(--h1-font-size);
+}
+
+.external-logo {
+  width: var(--h1-font-size);
+}
+
+.skills_bar {
+  height: 5px;
+  border-radius: 0.25rem;
+  background-color: var(--first-color);
+}
+
+.skills_list {
+  height: 0;
+  overflow: hidden;
+}
+
+.skills_open .skills_list {
+  height: max-content;
+  margin-bottom: var(--mb-2-5);
+  transition: 0.3s;
+}
+
+.skills_open .skills_arrow {
+  transform: rotate(-180deg);
+}
+.section_title {
+  position: center;
+  text-align: center;
+  padding-top: 70px;
+}
+.section_subtitle {
+  text-align: center;
+  position: center;
+  margin-left: 690px;
+}
+
+/* css for qualification */
+
+.qualification-section {
+    text-align: center;
+    padding-top: 80px;
+  }
+  
+  .qualification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .qualification img {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-top: 2%;
+  }
+  
+  .qualification h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .qualification p {
+    font-size: 16px;
+    color: #777;
+    max-width: 400px; /* Adjust the width as needed */
+    margin: 0 auto;
+    padding-left: 0%;
+  }
+  
+/* css for footer */
 
     .footcontainer {
       width: 100%;
