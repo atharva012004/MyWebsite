@@ -22,11 +22,12 @@
       width: 1525px;
     }
 
-    .navbar-brand {
+    .navbar-light .navbar-brand {
+      color: rgba(0, 0, 0, .9);
       padding-left: 260px;
     }
 
-    .navbar-expand-lg {
+    .navbar-expand-lg .navbar-collapse {
       padding-right: 260px;
     }
 
@@ -127,20 +128,42 @@
     }
 
     #gif {
-      width: 407px;
+      width: 475px;
       height: auto;
       margin-right: 80px;
       padding-right: 118px;
       border-radius: 90%;
     }
 
+
     #p1 {
       font-size: 18px;
       padding-left: 80px;
+
     }
+
+    #text-container {
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    #typing-text {
+      font-size: 20px;
+      color: #998888;
+      margin-bottom: 81px;
+    }
+
+    .myself {
+      margin-top: 0px;
+      margin-left: 82px;
+      width: 1129px;
+    }
+
 
     #head {
       padding-left: 8%;
+      width: 500px;
     }
 
     /* css for about */
@@ -440,13 +463,51 @@
       <h1 id="head">Hi! Myself Atharva</h1>
       <div class="myself">
         <img src="../Images/me.png" id="gif">
-        <p id="p1">
-          ||Undergraduate student with a desire to learn and grow|| <br>|| Skilled in C language||
-          <br>||Front-end development|| <br>||Cricket & Football enthusiast, and Music Lover||
-        </p>
+        <div id="text-container">
+          <h1 id="typing-text"></h1>
+        </div>
+        <script>
+          const words = ["I'm an Undergraduate student with a desire to learn and grow.", "I'm a Quick learner.", "Cricket & Football enthusiast", "&", "Music Lover"];
+          const typingTextElement = document.getElementById('typing-text');
+
+          let currentWordIndex = 0;
+          let currentWord = '';
+          let isDeleting = false;
+
+          function type() {
+            const word = words[currentWordIndex];
+
+            if (isDeleting) {
+              currentWord = word.substring(0, currentWord.length - 1);
+            } else {
+              currentWord = word.substring(0, currentWord.length + 1);
+            }
+
+            typingTextElement.textContent = currentWord;
+
+            if (!isDeleting && currentWord === word) {
+              isDeleting = true;
+              setTimeout(type, 1000);
+            } else if (isDeleting && currentWord === '') {
+              isDeleting = false;
+              currentWordIndex++;
+              if (currentWordIndex === words.length) {
+                currentWordIndex = 0;
+              }
+              setTimeout(type, 500);
+            } else {
+              const typingSpeed = isDeleting ? 50 : 100;
+              setTimeout(type, typingSpeed);
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', type);
+
+        </script>
       </div>
-    </div>
+
   </section>
+
 
   <!-- About Section -->
   <section id="about">
