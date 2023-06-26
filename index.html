@@ -53,13 +53,20 @@
     }
 
     /* Styles for mobile screens */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
 
-    @media (max-width: 576px) {
+      .navbar {
+        width: 100%;
+      }
+
       .navbar-brand {
         padding-left: 10px;
       }
 
-      .navbar-collapse {
+      .navbar-expand-lg .navbar-collapse {
         padding-right: 10px;
       }
 
@@ -68,39 +75,54 @@
         margin-bottom: 50px;
       }
 
-      #head {
-        font-size: 24px;
-      }
-
       #gif {
         width: 100%;
-        max-width: 300px;
         margin-right: 0;
         padding-right: 0;
       }
 
-      #p1 {
-        padding-left: 10px;
+      .myself {
+        width: 100%;
+        margin-left: 0;
       }
 
-      .content {
-        flex-direction: column;
-        align-items: center;
+      #text-container {
+        margin-top: 20px;
+      }
+
+      #p1 {
+        padding-left: 0;
+      }
+
+      .container {
+        padding-top: 20px;
       }
 
       #img1 {
         width: 100%;
-        max-width: 300px;
         margin-right: 0;
         padding-right: 0;
       }
 
+      .qualification-section {
+        padding-top: 50px;
+      }
+
       .footcontainer {
         height: auto;
+        padding: 10px;
       }
 
       .footlogo {
-        margin-left: 0;
+        margin-left: 10px;
+      }
+
+      #footlogo2 {
+        margin-left: 10px;
+      }
+
+      #footlogo3 {
+        margin-left: 10px;
       }
     }
     #head {
