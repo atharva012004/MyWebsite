@@ -11,11 +11,98 @@
 
   <!-- Custom CSS -->
   <style>
-    @media (max-width: 768px) 
-      {.container {
-        padding: 10px;
-      } }
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+      transition: background-color 0.5s ease;
+    }
 
+    .navbar {
+      background-color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    .navbar .dark-mode-btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .navbar .dark-mode-btn:hover {
+      background-color: #555;
+    }
+
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    /* Styles for mobile screens */
+
+    @media (max-width: 576px) {
+      .navbar-brand {
+        padding-left: 10px;
+      }
+
+      .navbar-collapse {
+        padding-right: 10px;
+      }
+
+      .homecontainer {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      #head {
+        font-size: 24px;
+      }
+
+      #gif {
+        width: 100%;
+        max-width: 300px;
+        margin-right: 0;
+        padding-right: 0;
+      }
+
+      #p1 {
+        padding-left: 10px;
+      }
+
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #img1 {
+        width: 100%;
+        max-width: 300px;
+        margin-right: 0;
+        padding-right: 0;
+      }
+
+      .footcontainer {
+        height: auto;
+      }
+
+      .footlogo {
+        margin-left: 0;
+      }
+    }
     #head {
       padding-top: 50px;
     }
