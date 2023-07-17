@@ -11,6 +11,463 @@
 
   <!-- Custom CSS -->
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* CSS for navbar */
+    .navbar {
+      background-color: #f8f8f8;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .navbar-toggler {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .navbar-toggler-icon {
+      width: 20px;
+      height: 20px;
+      background-color: #333;
+      border-radius: 2px;
+    }
+
+    .navbar-nav {
+      list-style-type: none;
+      margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .navbar-nav .nav-link {
+      color: #333;
+      text-decoration: none;
+    }
+    
+
+    /* css for dark button */
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+      transition: background-color 0.5s ease;
+    }
+
+    .navbar {
+      background-color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    .navbar .dark-mode-btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin-top: -1px;
+    }
+
+    .navbar .dark-mode-btn:hover {
+      background-color: #555;
+    }
+
+    /* Dark Mode */
+   
+    body.dark-mode {
+      background-color: #222;
+      color: #fff;
+    }
+
+    body.dark-mode .navbar {
+      background-color: #333;
+    }
+
+    body.dark-mode .navbar a {
+      color: #020202;
+    }
+
+    body.dark-mode .navbar .dark-mode-btn {
+      background-color: #f3eeee;
+      color: #333;
+    }
+
+    body.dark-mode .navbar .dark-mode-btn:hover {
+      background-color: #ccc;
+    }
+
+    /* CSS for home section */
+    .homecontainer {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .homecontainer #gif {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .homecontainer #p1 {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #666;
+    }
+
+    .homecontainer #text-container {
+      margin-top: 40px;
+    }
+
+    .homecontainer h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    #typing-text {
+      font-size: 1.5rem;
+    }
+
+    /* CSS for about section */
+    .container {
+      padding: 40px;
+    }
+
+    .container h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .container .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container .content img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .container .content p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    /* CSS for skills section */
+    .skills section {
+      margin-bottom: 20px;
+      text-align: center;
+
+    }
+
+    .skills-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .skill-name {
+      display: inline-block;
+      width: 100px;
+    }
+
+    .skill-bar {
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      height: 10px;
+      margin-top: 5px;
+      overflow: hidden;
+    }
+
+    .skill-level {
+      background-color: #4CAF50;
+      height: 100%;
+    }
+
+    .img-icon {
+      height: 40px;
+      width: 40px;
+    }
+
+    .pandas-icon {
+      height: 40px;
+      width: 60px;
+    }
+
+    .skills_container {
+      row-gap: 0;
+    }
+
+    .skills_header {
+      display: flex;
+      align-items: center;
+      margin-bottom: var(--mb-2-5);
+      cursor: pointer;
+    }
+
+    .skills_icon,
+    .skills_arrow {
+      font-size: 2rem;
+      font-weight: bolder;
+      color: var(--first-color);
+    }
+
+    .skills_icon {
+      margin-right: var(--mb-0-75);
+    }
+
+    #skills_title {
+      font-size: 155%;
+      text-align: center;
+      margin-left: 33%;
+      padding-top: 0%;
+    }
+
+    #skills_title1 {
+      font-size: 155%;
+      text-align: center;
+      margin-left: 0%;
+      padding-top: 60px;
+    }
+
+    #skills_title2 {
+      font-size: 155%;
+      text-align: center;
+      margin-left: 0%;
+      padding-top: 60px;
+      margin-bottom: 0px;
+    }
+
+    .skills_subtitle {
+      font-size: var(--small-font-size);
+      color: var(--text-color-light);
+      text-align: center;
+      margin-left: 0%;
+      position: center;
+    }
+
+    .skills_arrow {
+      margin-left: auto;
+      transition: 0.4s;
+    }
+
+    .skills_list {
+      row-gap: 1.5rem;
+      padding-left: 2.7rem;
+    }
+
+    .skills_titles {
+      display: flex;
+      justify-content: space-between;
+      /* margin-bottom: var(--mb-0-5); */
+      padding-top: 4%;
+      padding-right: 10px;
+    }
+
+    .skills_name {
+      font-size: var(--normal-font-size);
+      font-weight: var(--font-medium);
+    }
+
+    .single_skill_icon {
+      color: var(--first-color);
+      font-size: var(--h1-font-size);
+    }
+
+    .external-logo {
+      width: var(--h1-font-size);
+    }
+
+    .skills_bar {
+      height: 5px;
+      border-radius: 0.25rem;
+      background-color: var(--first-color);
+    }
+
+    .skills_list {
+      height: 0;
+      overflow: hidden;
+    }
+
+    .skills_open .skills_list {
+      height: max-content;
+      margin-bottom: var(--mb-2-5);
+      transition: 0.3s;
+    }
+
+    .skills_open .skills_arrow {
+      transform: rotate(-180deg);
+    }
+
+    .section_title {
+      position: center;
+      text-align: center;
+      padding-top: 70px;
+    }
+
+    .section_subtitle {
+      text-align: center;
+      position: center;
+      margin-left: 690px;
+    }
+
+    /* css for qualification*/
+    .qualification-section {
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    .qualification {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .qualification img {
+      width: 150px;
+      /* Adjust the size as needed */
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      margin-top: 2%;
+    }
+
+    .qualification h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .qualification p {
+      font-size: 16px;
+      color: #777;
+      max-width: 400px;
+      /* Adjust the width as needed */
+      margin: 0 auto;
+      padding-left: 0%;
+    }
+
+    /* CSS for contact section */
+    .contactcontainer {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .contactcontainer h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .contactcontainer .contact_info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .contactcontainer .info_item {
+      margin: 10px;
+      flex-basis: calc(33.33% - 20px);
+    }
+
+    .contactcontainer .info_item .icon {
+      font-size: 30px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .contactcontainer .info_item .info {
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* CSS for footer */
+    .footcontainer {
+      width: 100%;
+      height: 12rem;
+      background-color: rgba(94, 50, 153, 0.1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(70, 50, 114, 0.1), inset 0 .125em .5em rgba(11, 10, 10, 0.15);
+    }
+
+    .text-center text-body-secondary p {
+      font-size: 18px;
+      padding-left: 7px;
+    }
+    .footlogo {
+      margin-left: 900px;
+      border-radius: 25%;
+    }
+    #footlogo2 {
+      margin-left: 20px;
+      border-radius: 25%;
+    }
+    #footlogo3 {
+      margin-left: 20px;
+      border-radius: 25%;
+    }
+
+    /* Responsive CSS */
+    @media (max-width: 768px) {
+      .container .content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container .content img {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .skills.section .skills_list {
+        flex-direction: column;
+      }
+
+      .skills.section .skill_item {
+        flex-basis: 100%;
+      }
+
+      .contactcontainer .info_item {
+        flex-basis: 100%;
+      }
+    }
+  </style>
+  <!-- <style>
     body {
       background-color: #f0f0f0;
       color: #333;
@@ -52,114 +509,44 @@
       text-align: center;
     }
 
-    /* Styles for mobile screens */
     @media (max-width: 768px) {
-      .container {
-        padding: 10px;
+      .container .content {
+        flex-direction: column;
+        align-items: center;
       }
 
-      .navbar {
-        width: 100%;
-      }
-
-      .navbar-brand {
-        padding-left: 10px;
-      }
-
-      .navbar-expand-lg .navbar-collapse {
-        padding-right: 10px;
-      }
-
-      .homecontainer {
-        margin-top: 50px;
-        margin-bottom: 50px;
-      }
-
-      #gif {
-        width: 100%;
+      .container .content img {
         margin-right: 0;
-        padding-right: 0;
+        margin-bottom: 20px;
       }
 
-      .myself {
-        width: 100%;
-        margin-left: 0;
+      .skills.section .skills_list {
+        flex-direction: column;
       }
 
-      #text-container {
-        margin-top: 20px;
+      .skills.section .skill_item {
+        flex-basis: 100%;
       }
 
-      #p1 {
-        padding-left: 0;
-      }
-
-      .container {
-        padding-top: 20px;
-      }
-
-      #img1 {
-        width: 100%;
-        margin-right: 0;
-        padding-right: 0;
-      }
-
-      .qualification-section {
-        padding-top: 50px;
-      }
-
-      .footcontainer {
-        height: auto;
-        padding: 10px;
-      }
-
-      .footlogo {
-        margin-left: 10px;
-      }
-
-      #footlogo2 {
-        margin-left: 10px;
-      }
-
-      #footlogo3 {
-        margin-left: 10px;
+      .contactcontainer .info_item {
+        flex-basis: 100%;
       }
     }
-    #head {
-      padding-top: 50px;
-    }
 
-    .navbar {
-      position: fixed;
-      top: 0%;
-      height: 40px;
-      width: 1525px;
-    }
+    @media (max-width: 480px) {
+      .homecontainer #gif {
+        width: 150px;
+        height: 150px;
+      }
 
-    .navbar-light .navbar-brand {
-      color: rgba(0, 0, 0, .9);
-      padding-left: 260px;
-    }
+      .homecontainer h2 {
+        font-size: 24px;
+      }
 
-    .navbar-expand-lg .navbar-collapse {
-      padding-right: 260px;
+      .homecontainer #p1 {
+        font-size: 14px;
+      }
     }
-
-    .contactcontainer {
-      max-width: 641px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    body.dark-mode .navbar a {
-      color: #0a0909;
-    }
-
-    body.dark-mode .navbar .dark-mode-btn {
-      background-color: #040303;
-      color: #333;
-    }
-
     /* css for dark button */
     body {
       background-color: #f0f0f0;
@@ -540,7 +927,7 @@
       margin-left: 20px;
       border-radius: 25%;
     }
-  </style>
+  </style> -->
 </head>
 
 <body>
