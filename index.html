@@ -11,6 +11,59 @@
 
   <!-- Custom CSS -->
   <style>
+     body {
+      background-color: #f0f0f0;
+      color: #333;
+      transition: background-color 0.5s ease;
+    }
+    
+    .navbar {
+      background-color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+    
+    .navbar .dark-mode-btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    
+    .navbar .dark-mode-btn:hover {
+      background-color: #555;
+    }
+    
+    /* Dark Mode */
+    body.dark-mode {
+      background-color: #222;
+      color: #fff;
+    }
+    
+    body.dark-mode .navbar {
+      background-color: #333;
+    }
+    
+    body.dark-mode .navbar a {
+      color: #fff;
+    }
+    
+    body.dark-mode .navbar .dark-mode-btn {
+      background-color: #fff;
+      color: #333;
+    }
+    
+    body.dark-mode .navbar .dark-mode-btn:hover {
+      background-color: #ccc;
+    }
     * {
       box-sizing: border-box;
       margin: 0;
@@ -64,71 +117,8 @@
     }
     
 
-    /* css for dark button */
-    body {
-      background-color: #f0f0f0;
-      color: #333;
-      transition: background-color 0.5s ease;
-    }
-
-    .navbar {
-      background-color: #fff;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .navbar a {
-      color: #333;
-      text-decoration: none;
-      padding: 5px;
-    }
-
-    .navbar .dark-mode-btn {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-
-    .navbar .dark-mode-btn:hover {
-      background-color: #555;
-    }
-
-    /* Dark Mode */
-   
-    body.dark-mode {
-      background-color: #222;
-      color: #fff;
-    }
-
-    body.dark-mode .navbar {
-      background-color: #333;
-    }
-
-    body.dark-mode .navbar a {
-      color: #020202;
-    }
-
-    body.dark-mode .navbar .dark-mode-btn {
-      background-color: #f3eeee;
-      color: #333;
-    }
-
-    body.dark-mode .navbar .dark-mode-btn:hover {
-      background-color: #ccc;
-    }
     
-    .dark-mode {
-        background-color: black;
-        color: white;
-    }
-
-.light-grey {
-    color: #000!important;
-    background-color: #f1f1f1!important;
-}
+   
     /* CSS for home section */
     .homecontainer {
       padding: 40px;
@@ -532,35 +522,17 @@
         </li>
         <li>
           <a href="#"></a>
-          <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark</button>
+          <button class="dark-mode-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </nav>
-<script>
-// On page load set the theme.
-(function() {
-  let onpageLoad = localStorage.getItem("theme") || "";
-  let element = document.body;
-  element.classList.add(onpageLoad);
-  document.getElementById("theme").textContent = localStorage.getItem("theme") || "light";
-})();
-
-function themeToggle() {
-  let element = document.body;
-  element.classList.toggle("dark-mode");
-
-  let theme = localStorage.getItem("theme");
-  if (theme && theme === "dark-mode") {
-    localStorage.setItem("theme", "");
-  } else {
-    localStorage.setItem("theme", "dark-mode");
-  }
-
-  document.getElementById("theme").textContent = localStorage.getItem("theme");
-}
-</script>
   </li>
   </ul>
   </div>
-  </nav>
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+    }
+  </script>
 
   <!-- Home Section -->
   <section id="home">
