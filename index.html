@@ -11,25 +11,25 @@
 
   <!-- Custom CSS -->
   <style>
-     body {
+    body {
       background-color: #282529;
       color: #e7dfdf;
       transition: background-color 0.5s ease;
     }
-    
+
     .navbar {
       background-color: #aa64d2;
       padding: 10px;
       display: flex;
       justify-content: space-between;
     }
-    
+
     .navbar a {
       color: #dfd6d6;
       text-decoration: none;
       padding: 5px;
     }
-    
+
     .navbar .dark-mode-btn {
       background-color: #333;
       color: #fff;
@@ -37,33 +37,34 @@
       padding: 5px 10px;
       cursor: pointer;
     }
-    
+
     .navbar .dark-mode-btn:hover {
       background-color: #555;
     }
-    
+
     /* Dark Mode */
     body.dark-mode {
       background-color: #222;
       color: #fff;
     }
-    
+
     body.dark-mode .navbar {
       background-color: #333;
     }
-    
+
     body.dark-mode .navbar a {
       color: #fff;
     }
-    
+
     body.dark-mode .navbar .dark-mode-btn {
       background-color: #fff;
       color: #333;
     }
-    
+
     body.dark-mode .navbar .dark-mode-btn:hover {
       background-color: #ccc;
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -74,9 +75,10 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
     }
+
     body.dark-mode .navbar a {
-    color: #090808;
-}
+      color: #090808;
+    }
 
     /* CSS for navbar */
     .navbar {
@@ -118,17 +120,17 @@
       color: #333;
       text-decoration: none;
     }
-    
 
-    
-   
+
+
+
     /* CSS for home section */
-   
+
     .homecontainer {
       padding: 95px;
       text-align: center;
       padding-left: 15px;
-    padding-right: 15px;
+      padding-right: 15px;
     }
 
     .homecontainer #gif {
@@ -138,7 +140,7 @@
       object-fit: cover;
       padding-top: 0px;
       margin-top: 50px;
-}
+    }
 
     .homecontainer #p1 {
       margin-top: 20px;
@@ -154,8 +156,9 @@
       font-size: 32px;
       color: #333;
       margin-bottom: 20px;
-     
+
     }
+
     #typing-text {
       font-size: 1.5rem;
     }
@@ -164,7 +167,7 @@
     .container {
       padding: 80px;
       padding-left: 10px;
-    padding-right: 10px;
+      padding-right: 10px;
     }
 
     .container h2 {
@@ -176,10 +179,10 @@
 
     .container .content {
       display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
     }
 
     .container .content img {
@@ -189,7 +192,7 @@
       object-fit: cover;
       margin-right: 20px;
       padding-top: 3px;
-    margin-top: 19px;
+      margin-top: 19px;
     }
 
     .container .content p {
@@ -404,6 +407,9 @@
     .contactcontainer {
       padding: 40px;
       text-align: center;
+      width: 1030px;
+      margin-right: 230px;
+      margin-left: 230px;
     }
 
     .contactcontainer h2 {
@@ -435,7 +441,7 @@
       font-size: 16px;
       color: #666;
     }
-    
+
 
     /* CSS for footer */
     .footcontainer {
@@ -451,14 +457,17 @@
       font-size: 18px;
       padding-left: 7px;
     }
+
     .footlogo {
       margin-left: 900px;
       border-radius: 25%;
     }
+
     #footlogo2 {
       margin-left: 20px;
       border-radius: 25%;
     }
+
     #footlogo3 {
       margin-left: 20px;
       border-radius: 25%;
@@ -486,7 +495,12 @@
 
       .contactcontainer .info_item {
         flex-basis: 100%;
+        width: 700px;
+        margin-right: 40px;
+        margin-left: 40px;
+
       }
+
       .footcontainer .footlogo {
         font-size: 16px;
         margin-left: 13px;
@@ -507,13 +521,19 @@
         font-size: 14px;
       }
 
+      .contactcontainer {
+        width: 365px;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+
       .footcontainer .footlogo {
         font-size: 14px;
         margin-left: 17px;
       }
     }
   </style>
- 
+
 </head>
 
 <body>
@@ -564,7 +584,7 @@
         <div id="text-container">
           <h1 id="typing-text"></h1>
         </div>
-        
+
         <script>
           const words = ["I'm an Undergraduate student with a desire to learn and grow.", "I'm a Quick learner.", "Cricket 🏏 & Football ⚽️ Enthusiast.", "&", "Music Lover 🎶"];
           const typingTextElement = document.getElementById('typing-text');
@@ -612,11 +632,15 @@
   <section id="about">
     <div class="container">
       <h2>About Me</h2>
-      <div class="content" >
+      <div class="content">
         <img src="../Images/ph.jpg" id="img1">
         <p class="dark-mode-content">
-          Hello! Myself Atharva Shihurkar & I'm an undergraduate student👨‍💻 seeking a lucrative IT job with a strong ambition to continuously learn and grow. With a strong foundation in programming languages like C, HTML, and CSS, I've also exceled in various technologies like Microsoft Word, PowerPoint, and Excel. In my free time, I enjoy playing sports like cricket🏏 and football⚽️, which instill values of collaboration, teamwork, strategic thinking, and adaptation. I also enjoys listening to music🎵 and reading science fiction books📖.
-        </p> 
+          Hello! Myself Atharva Shihurkar & I'm an undergraduate student👨‍💻 seeking a lucrative IT job with a strong
+          ambition to continuously learn and grow. With a strong foundation in programming languages like C, HTML, and
+          CSS, I've also exceled in various technologies like Microsoft Word, PowerPoint, and Excel. In my free time, I
+          enjoy playing sports like cricket🏏 and football⚽️, which instill values of collaboration, teamwork, strategic
+          thinking, and adaptation. I also enjoys listening to music🎵 and reading science fiction books📖.
+        </p>
       </div>
     </div>
   </section>
@@ -812,10 +836,14 @@
       <li class="foot-item"><a href="#projects" class="nav-link px-2 text-body-secondary">Projects</a></li>
       <li class="foot-item"><a href="#contact" class="nav-link px-2 text-body-secondary">Contact</a></li>
     </ul>
-    <p class="text-center text-body-secondary">&copy; 2023 Atharva Shihurkar , All rights are reserved <a href="https://www.instagram.com/atharva_shihurkar_7/"><img src="../Images/insta.jpeg" width="40px" height="40px"class="footlogo"></a> <a href="https://github.com/atharva012004"><img src="../Images/hub.png" width="40px" height="40px" id="footlogo2"></a> <a href="https://www.linkedin.com/in/atharva-shihurkar-758ba325b/"><img src="../Images/linkdin.png" width="40px" height="40px" id="footlogo3"></a>
-      
+    <p class="text-center text-body-secondary">&copy; 2023 Atharva Shihurkar , All rights are reserved <a
+        href="https://www.instagram.com/atharva_shihurkar_7/"><img src="../Images/insta.jpeg" width="40px" height="40px"
+          class="footlogo"></a> <a href="https://github.com/atharva012004"><img src="../Images/hub.png" width="40px"
+          height="40px" id="footlogo2"></a> <a href="https://www.linkedin.com/in/atharva-shihurkar-758ba325b/"><img
+          src="../Images/linkdin.png" width="40px" height="40px" id="footlogo3"></a>
+
     </p>
-    
+
     </ul>
   </footer>
 
