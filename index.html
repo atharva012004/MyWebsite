@@ -90,7 +90,6 @@
       border: none;
       padding: 5px 10px;
       cursor: pointer;
-      margin-top: -1px;
     }
 
     .navbar .dark-mode-btn:hover {
@@ -120,7 +119,10 @@
     body.dark-mode .navbar .dark-mode-btn:hover {
       background-color: #ccc;
     }
-
+    
+    .dark-mode-content {
+        color: white;
+      }
     /* CSS for home section */
     .homecontainer {
       padding: 40px;
@@ -184,6 +186,10 @@
       color: #666;
       margin-bottom: 20px;
     }
+
+
+
+
 
     /* CSS for skills section */
     .skills section {
@@ -490,467 +496,7 @@
       }
     }
   </style>
-  <!-- <style>
-    body {
-      background-color: #f0f0f0;
-      color: #333;
-      transition: background-color 0.5s ease;
-    }
-
-    .navbar {
-      background-color: #fff;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .navbar a {
-      color: #333;
-      text-decoration: none;
-      padding: 5px;
-    }
-
-    .navbar .dark-mode-btn {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-
-    .navbar .dark-mode-btn:hover {
-      background-color: #555;
-    }
-
-    .container {
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .container .content {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .container .content img {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
-
-      .skills.section .skills_list {
-        flex-direction: column;
-      }
-
-      .skills.section .skill_item {
-        flex-basis: 100%;
-      }
-
-      .contactcontainer .info_item {
-        flex-basis: 100%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .homecontainer #gif {
-        width: 150px;
-        height: 150px;
-      }
-
-      .homecontainer h2 {
-        font-size: 24px;
-      }
-
-      .homecontainer #p1 {
-        font-size: 14px;
-      }
-    }
-    /* css for dark button */
-    body {
-      background-color: #f0f0f0;
-      color: #333;
-      transition: background-color 0.5s ease;
-    }
-
-    .navbar {
-      background-color: #fff;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .navbar a {
-      color: #333;
-      text-decoration: none;
-      padding: 5px;
-    }
-
-    .navbar .dark-mode-btn {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-
-    .navbar .dark-mode-btn:hover {
-      background-color: #555;
-    }
-
-    /* Dark Mode */
-   
-    body.dark-mode {
-      background-color: #222;
-      color: #fff;
-    }
-
-    body.dark-mode .navbar {
-      background-color: #333;
-    }
-
-    body.dark-mode .navbar a {
-      color: #020202;
-    }
-
-    body.dark-mode .navbar .dark-mode-btn {
-      background-color: #f3eeee;
-      color: #333;
-    }
-
-    body.dark-mode .navbar .dark-mode-btn:hover {
-      background-color: #ccc;
-    }
-
-    /* css for home */
-    .homecontainer {
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 20px;
-      margin-top: 140px;
-      margin-bottom: 135px;
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    .myself {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 20px;
-      width: 1135px;
-      padding-right: 0px;
-      margin-right: 0px;
-      flex-direction: row-reverse;
-      align-content: center;
-
-    }
-
-    #gif {
-      width: 475px;
-      height: auto;
-      margin-right: 80px;
-      padding-right: 118px;
-      border-radius: 90%;
-    }
-
-
-    #p1 {
-      font-size: 18px;
-      padding-left: 80px;
-
-    }
-
-    #text-container {
-      text-align: center;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-
-    #typing-text {
-      font-size: 20px;
-      color: #998888;
-      margin-bottom: 81px;
-    }
-
-    .myself {
-      margin-top: 0px;
-      margin-left: 82px;
-      width: 1129px;
-    }
-
-
-    #head {
-      padding-left: 8%;
-      width: 500px;
-    }
-
-    /* css for about */
-
-    .container {
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 20px;
-      padding-top: 50px;
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    .content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 20px;
-      width: 1135px;
-      padding-right: 0px;
-      margin-right: 0px;
-    }
-
-    #img1 {
-      width: 474px;
-      height: auto;
-      margin-right: 0px;
-      padding-right: 118px;
-      border-radius: 0%;
-
-    }
-
-    p {
-      font-size: 18px;
-    }
-
-    /* css for skills */
-
-    .skills section {
-      margin-bottom: 20px;
-      text-align: center;
-
-    }
-
-    .skills-list {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .skill-name {
-      display: inline-block;
-      width: 100px;
-    }
-
-    .skill-bar {
-      background-color: #f1f1f1;
-      border-radius: 5px;
-      height: 10px;
-      margin-top: 5px;
-      overflow: hidden;
-    }
-
-    .skill-level {
-      background-color: #4CAF50;
-      height: 100%;
-    }
-
-    .img-icon {
-      height: 40px;
-      width: 40px;
-    }
-
-    .pandas-icon {
-      height: 40px;
-      width: 60px;
-    }
-
-    .skills_container {
-      row-gap: 0;
-    }
-
-    .skills_header {
-      display: flex;
-      align-items: center;
-      margin-bottom: var(--mb-2-5);
-      cursor: pointer;
-    }
-
-    .skills_icon,
-    .skills_arrow {
-      font-size: 2rem;
-      font-weight: bolder;
-      color: var(--first-color);
-    }
-
-    .skills_icon {
-      margin-right: var(--mb-0-75);
-    }
-
-    #skills_title {
-      font-size: 155%;
-      text-align: center;
-      margin-left: 33%;
-      padding-top: 0%;
-    }
-
-    #skills_title1 {
-      font-size: 155%;
-      text-align: center;
-      margin-left: 0%;
-      padding-top: 60px;
-    }
-
-    #skills_title2 {
-      font-size: 155%;
-      text-align: center;
-      margin-left: 0%;
-      padding-top: 60px;
-      margin-bottom: 0px;
-    }
-
-    .skills_subtitle {
-      font-size: var(--small-font-size);
-      color: var(--text-color-light);
-      text-align: center;
-      margin-left: 0%;
-      position: center;
-    }
-
-    .skills_arrow {
-      margin-left: auto;
-      transition: 0.4s;
-    }
-
-    .skills_list {
-      row-gap: 1.5rem;
-      padding-left: 2.7rem;
-    }
-
-    .skills_titles {
-      display: flex;
-      justify-content: space-between;
-      /* margin-bottom: var(--mb-0-5); */
-      padding-top: 4%;
-      padding-right: 10px;
-    }
-
-    .skills_name {
-      font-size: var(--normal-font-size);
-      font-weight: var(--font-medium);
-    }
-
-    .single_skill_icon {
-      color: var(--first-color);
-      font-size: var(--h1-font-size);
-    }
-
-    .external-logo {
-      width: var(--h1-font-size);
-    }
-
-    .skills_bar {
-      height: 5px;
-      border-radius: 0.25rem;
-      background-color: var(--first-color);
-    }
-
-    .skills_list {
-      height: 0;
-      overflow: hidden;
-    }
-
-    .skills_open .skills_list {
-      height: max-content;
-      margin-bottom: var(--mb-2-5);
-      transition: 0.3s;
-    }
-
-    .skills_open .skills_arrow {
-      transform: rotate(-180deg);
-    }
-
-    .section_title {
-      position: center;
-      text-align: center;
-      padding-top: 70px;
-    }
-
-    .section_subtitle {
-      text-align: center;
-      position: center;
-      margin-left: 690px;
-    }
-
-    /* css for qualification */
-
-    .qualification-section {
-      text-align: center;
-      padding-top: 80px;
-    }
-
-    .qualification {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 30px;
-    }
-
-    .qualification img {
-      width: 150px;
-      /* Adjust the size as needed */
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-      margin-top: 2%;
-    }
-
-    .qualification h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .qualification p {
-      font-size: 16px;
-      color: #777;
-      max-width: 400px;
-      /* Adjust the width as needed */
-      margin: 0 auto;
-      padding-left: 0%;
-    }
-
-    /* css for footer */
-
-    .footcontainer {
-      width: 100%;
-      height: 12rem;
-      background-color: rgba(94, 50, 153, 0.1);
-      border: solid rgba(0, 0, 0, .15);
-      border-width: 1px 0;
-      box-shadow: inset 0 .5em 1.5em rgba(70, 50, 114, 0.1), inset 0 .125em .5em rgba(11, 10, 10, 0.15);
-    }
-
-    .text-center text-body-secondary p {
-      font-size: 18px;
-      padding-left: 7px;
-    }
-    .footlogo {
-      margin-left: 900px;
-      border-radius: 25%;
-    }
-    #footlogo2 {
-      margin-left: 20px;
-      border-radius: 25%;
-    }
-    #footlogo3 {
-      margin-left: 20px;
-      border-radius: 25%;
-    }
-  </style> -->
+ 
 </head>
 
 <body>
@@ -1050,9 +596,9 @@
   <section id="about">
     <div class="container">
       <h2>About Me</h2>
-      <div class="content">
+      <div class="content" >
         <img src="../Images/ph.jpg" id="img1">
-        <p>
+        <p class="dark-mode-content">
           Hi! I'm an undergraduate student, looking for a lucrative job in the IT field. With a strong ambition to
           constantly learn and increase my knowledge, I am keen to maximise my talents and contribute to the success of
           an organisation.
@@ -1067,7 +613,7 @@
           and teamwork but also the value of strategic thinking and adaptation. In addition, I find peace in the realm
           of music, where I can explore numerous genres and admire musician's unique interpretations. Furthermore, my
           interest in reading science fiction Books stimulates my curiosity.
-        </p>
+        </p> 
       </div>
     </div>
   </section>
