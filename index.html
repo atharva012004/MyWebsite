@@ -120,9 +120,15 @@
       background-color: #ccc;
     }
     
-    .dark-mode-content {
+    .dark-mode {
+        background-color: black;
         color: white;
-      }
+    }
+
+.light-grey {
+    color: #000!important;
+    background-color: #f1f1f1!important;
+}
     /* CSS for home section */
     .homecontainer {
       padding: 40px;
@@ -528,13 +534,29 @@
           <a href="#"></a>
           <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark</button>
   </nav>
+<script>
+// On page load set the theme.
+(function() {
+  let onpageLoad = localStorage.getItem("theme") || "";
+  let element = document.body;
+  element.classList.add(onpageLoad);
+  document.getElementById("theme").textContent = localStorage.getItem("theme") || "light";
+})();
 
-  <script>
-    function toggleDarkMode() {
-      const body = document.body;
-      body.classList.toggle("dark-mode");
-    }
-  </script>
+function themeToggle() {
+  let element = document.body;
+  element.classList.toggle("dark-mode");
+
+  let theme = localStorage.getItem("theme");
+  if (theme && theme === "dark-mode") {
+    localStorage.setItem("theme", "");
+  } else {
+    localStorage.setItem("theme", "dark-mode");
+  }
+
+  document.getElementById("theme").textContent = localStorage.getItem("theme");
+}
+</script>
   </li>
   </ul>
   </div>
