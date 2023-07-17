@@ -74,6 +74,9 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
     }
+    body.dark-mode .navbar a {
+    color: #090808;
+}
 
     /* CSS for navbar */
     .navbar {
@@ -120,17 +123,20 @@
     
    
     /* CSS for home section */
+   
     .homecontainer {
-      padding: 40px;
+      padding: 75px;
       text-align: center;
     }
 
     .homecontainer #gif {
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       object-fit: cover;
-    }
+      padding-top: 0px;
+      margin-top: 50px;
+}
 
     .homecontainer #p1 {
       margin-top: 20px;
@@ -146,6 +152,7 @@
       font-size: 32px;
       color: #333;
       margin-bottom: 20px;
+     
     }
     #typing-text {
       font-size: 1.5rem;
@@ -158,8 +165,9 @@
 
     .container h2 {
       font-size: 32px;
-      color: #333;
+      color: #0a0909;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .container .content {
@@ -175,12 +183,15 @@
       border-radius: 50%;
       object-fit: cover;
       margin-right: 20px;
+      padding-top: 3px;
+    margin-top: 19px;
     }
 
     .container .content p {
       font-size: 16px;
       color: #666;
       margin-bottom: 20px;
+      padding-top: 25px;
     }
 
 
@@ -416,6 +427,11 @@
       font-size: 16px;
       color: #666;
     }
+    .form-control {
+    width: 730.6px;
+    border-left-width: 1px;
+    margin-left: 376px;
+}
 
     /* CSS for footer */
     .footcontainer {
@@ -522,7 +538,7 @@
         </li>
         <li>
           <a href="#"></a>
-          <button class="dark-mode-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+          <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode</button>
   </nav>
   </li>
   </ul>
