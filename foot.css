@@ -1,0 +1,29 @@
+/* CSS for footer */
+.footcontainer {
+    width: 100%;
+    height: 12rem;
+    background-color: rgba(94, 50, 153, 0.1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(70, 50, 114, 0.1), inset 0 .125em .5em rgba(11, 10, 10, 0.15);
+}
+
+.text-center text-body-secondary p {
+    font-size: 18px;
+    padding-left: 7px;
+}
+
+.footlogo {
+    margin-left: 900px;
+    border-radius: 25%;
+}
+
+#footlogo2 {
+    margin-left: 20px;
+    border-radius: 25%;
+}
+
+#footlogo3 {
+    margin-left: 20px;
+    border-radius: 25%;
+}

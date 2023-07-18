@@ -1,0 +1,41 @@
+
+/* CSS for navbar */
+.navbar {
+    background-color: #0b0a0a;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #c3bfbf;
+    border-radius: 2px;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    text-decoration: none;
+}

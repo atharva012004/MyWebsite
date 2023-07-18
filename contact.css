@@ -1,0 +1,39 @@
+
+/* CSS for contact section */
+.contactcontainer {
+    padding: 40px;
+    text-align: center;
+    width: 1030px;
+    margin-right: 230px;
+    margin-left: 230px;
+}
+
+.contactcontainer h2 {
+    font-size: 32px;
+    color: #e7dfdf;
+    margin-bottom: 20px;
+}
+
+.contactcontainer .contact_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contactcontainer .info_item {
+    margin: 10px;
+    flex-basis: calc(33.33% - 20px);
+}
+
+.contactcontainer .info_item .icon {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contactcontainer .info_item .info {
+    font-size: 16px;
+    color: #666;
+}
