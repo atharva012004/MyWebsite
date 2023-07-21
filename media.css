@@ -55,6 +55,13 @@
         font-size: 14px;
     }
 
+    .navbar {
+        padding-left: 45px;
+        padding-right: 45px;
+        position: fixed;
+        width: 380px;
+    }
+
     .container .content p {
         font-size: 17px;
     }
