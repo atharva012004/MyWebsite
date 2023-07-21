@@ -4,6 +4,8 @@
     background-color: #0b0a0a;
     padding-left: 45px;
     padding-right: 45px;
+    position: fixed;
+    width: 1519px;
 }
 
 .navbar-brand {
