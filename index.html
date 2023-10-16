@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="./contact.css">
   <link rel="stylesheet" href="./foot.css">
   <link rel="stylesheet" href="./media.css">
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
  </head>
 <body>
   <!-- Navbar -->
@@ -65,46 +66,52 @@
       <div class="myself">
         <img src="../Images/me.png" type="video/mp4" id="gif">
         <div id="text-container">
-          <h1 id="typing-text"></h1>
+          <h1 id="typing-text">I'm <span class="text"></span></h1>
         </div>
 
         <script>
-          const words = ["I'm an Undergraduate student with a desire to learn and grow.", "I'm a Quick learner.", "Cricket 🏏 & Football ⚽️ Enthusiast.", "&", "Music Lover 🎶"];
-          const typingTextElement = document.getElementById('typing-text');
+          // const words = ["I'm an Undergraduate student with a desire to learn and grow.", "I'm a Quick learner.", "Cricket 🏏 & Football ⚽️ Enthusiast.", "&", "Music Lover 🎶"];
+          // const typingTextElement = document.getElementById('typing-text');
 
-          let currentWordIndex = 0;
-          let currentWord = '';
-          let isDeleting = false;
+          // let currentWordIndex = 0;
+          // let currentWord = '';
+          // let isDeleting = false;
 
-          function type() {
-            const word = words[currentWordIndex];
+          // function type() {
+          //   const word = words[currentWordIndex];
 
-            if (isDeleting) {
-              currentWord = word.substring(0, currentWord.length - 1);
-            } else {
-              currentWord = word.substring(0, currentWord.length + 1);
-            }
+          //   if (isDeleting) {
+          //     currentWord = word.substring(0, currentWord.length - 1);
+          //   } else {
+          //     currentWord = word.substring(0, currentWord.length + 1);
+          //   }
 
-            typingTextElement.textContent = currentWord;
+          //   typingTextElement.textContent = currentWord;
 
-            if (!isDeleting && currentWord === word) {
-              isDeleting = true;
-              setTimeout(type, 1000);
-            } else if (isDeleting && currentWord === '') {
-              isDeleting = false;
-              currentWordIndex++;
-              if (currentWordIndex === words.length) {
-                currentWordIndex = 0;
-              }
-              setTimeout(type, 500);
-            } else {
-              const typingSpeed = isDeleting ? 50 : 100;
-              setTimeout(type, typingSpeed);
-            }
-          }
+          //   if (!isDeleting && currentWord === word) {
+          //     isDeleting = true;
+          //     setTimeout(type, 1000);
+          //   } else if (isDeleting && currentWord === '') {
+          //     isDeleting = false;
+          //     currentWordIndex++;
+          //     if (currentWordIndex === words.length) {
+          //       currentWordIndex = 0;
+          //     }
+          //     setTimeout(type, 500);
+          //   } else {
+          //     const typingSpeed = isDeleting ? 50 : 100;
+          //     setTimeout(type, typingSpeed);
+          //   }
+          // }
 
-          document.addEventListener('DOMContentLoaded', type);
-
+          // document.addEventListener('DOMContentLoaded', type);
+          var typed = new Typed(".text",{
+            strings:["an Undergraduate student with a desire to learn and grow.", "a Quick learner.", "also a passionate Cricket 🏏 & Football ⚽️ Enthusiast."],
+            typeSpeed:60,
+            backSpeed:70,
+            backDelay:100,
+            loop:true
+          });
         </script>
       </div>
 
@@ -322,10 +329,10 @@
       <li class="foot-item"><a href="#contact" class="nav-link px-2 text-body-secondary">Contact</a></li>
     </ul>
     <p class="text-center text-body-secondary">&copy; 2023 Atharva Shihurkar , All rights are reserved <a
-        href="https://www.instagram.com/atharva_shihurkar_7/"><img src="../Images/insta.jpeg" width="40px" height="40px"
-          class="footlogo"></a> <a href="https://github.com/atharva012004"><img src="../Images/hub.png" width="40px"
-          height="40px" id="footlogo2"></a> <a href="https://www.linkedin.com/in/atharva-shihurkar-758ba325b/"><img
-          src="../Images/linkdin.png" width="40px" height="40px" id="footlogo3"></a>
+        href="https://www.instagram.com/atharva_shihurkar_7/"><img src="../MyWebsite/Images/instagram-logo-24.png" width="40px" height="40px"
+          class="footlogo"></a>
+           <a href="https://github.com/atharva012004"><img src="../MyWebsite/Images/github-logo-24 blue(1).png" width="40px" height="40px" id="footlogo2"></a> 
+          <a href="https://www.linkedin.com/in/atharva-shihurkar-758ba325b/"><img src="../MyWebsite/Images/linkedin-square-logo-24.png" width="40px" height="40px" id="footlogo3"></a>
     </p>
     </ul>
   </footer>
