@@ -9,10 +9,10 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-800 font-sans">
-  <nav class="bg-blue-600 text-white fixed w-full z-10 transition-all duration-300" id="navbar">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+  <nav class="bg-blue-600 text-white fixed w-full z-50 transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center relative">
         <a href="#" class="text-xl font-bold">Atharva</a>
-        <div class="hidden md:flex space-x-4 hidden-mobile">
+        <div class="hidden md:flex space-x-4">
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#skills" class="nav-link">Skills</a>
@@ -24,16 +24,16 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
+        
+        <div class="mobile-menu hidden absolute top-full left-0 right-0 bg-blue-600 shadow-md">
+            <a href="#home" class="block py-2 px-4 text-sm hover:bg-blue-700">Home</a>
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-blue-700">About</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-blue-700">Skills</a>
+            <a href="#qualifications" class="block py-2 px-4 text-sm hover:bg-blue-700">Qualifications</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-blue-700">Contact</a>
+        </div>
     </div>
 </nav>
-
-<div class="mobile-menu">
-    <a href="#home" class="block py-2 px-4 text-sm hover:bg-blue-700">Home</a>
-    <a href="#about" class="block py-2 px-4 text-sm hover:bg-blue-700">About</a>
-    <a href="#skills" class="block py-2 px-4 text-sm hover:bg-blue-700">Skills</a>
-    <a href="#qualifications" class="block py-2 px-4 text-sm hover:bg-blue-700">Qualifications</a>
-    <a href="#contact" class="block py-2 px-4 text-sm hover:bg-blue-700">Contact</a>
-</div>
 
     <main>
       <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 text-white">
