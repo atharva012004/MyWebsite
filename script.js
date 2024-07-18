@@ -1,6 +1,7 @@
 // Typing animation
+const typingPrefix = document.getElementById('typing-prefix');
 const typingText = document.getElementById('typing-text');
-const phrases = ["I'm a Web Developer", "I'm a Student", "I'm a Tech Enthusiast"];
+const phrases = ["Web Developer", "Student", "Tech Enthusiast" , "Football and Cricket lover"];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -18,19 +19,21 @@ function typePhrase() {
 
     if (!isDeleting && charIndex === currentPhrase.length) {
         isDeleting = true;
-        setTimeout(typePhrase, 2000);
+        setTimeout(typePhrase, 2000); // Wait before starting to delete
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
-        setTimeout(typePhrase, 500);
+        setTimeout(typePhrase, 500); // Wait before typing next phrase
     } else {
         setTimeout(typePhrase, isDeleting ? 50 : 100);
     }
 }
 
 // Start typing animation when the page loads
-window.addEventListener('load', typePhrase);
-
+window.addEventListener('load', () => {
+    typingPrefix.textContent = "I'm a "; // Set the prefix
+    typePhrase(); // Start the typing animation
+});
 // Mobile menu toggle
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
