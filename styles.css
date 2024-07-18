@@ -29,6 +29,26 @@ body {
     padding: 0 20px;
 }
 
+#typing-container {
+    display: inline-block;
+    position: relative;
+    min-height: 3rem;
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #fff;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 /* Navigation */
 #navbar {
     transition: top 0.3s;
@@ -56,12 +76,23 @@ body {
 }
 
 .mobile-menu {
-    background-color: var(--primary-color);
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 10;
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.mobile-menu.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hidden-mobile {
+        display: none;
+    }
 }
 
 /* Home Section */
@@ -69,6 +100,10 @@ body {
     position: relative;
     overflow: hidden;
     padding: 100px 0;
+    min-height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #home::before {
@@ -90,14 +125,7 @@ body {
 
 #typing-text {
     min-height: 3rem;
-}
-
-#home img {
-    transition: transform 0.3s ease;
-}
-
-#home img:hover {
-    transform: scale(1.05);
+    display: inline-block; /* Ensure the element takes only the necessary width */
 }
 
 /* Animations */
