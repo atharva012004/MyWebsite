@@ -1,0 +1,98 @@
+// Typing animation
+const typingText = document.getElementById('typing-text');
+const phrases = ["I'm a Web Developer", "I'm a Student", "I'm a Tech Enthusiast"];
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typePhrase() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+        typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        setTimeout(typePhrase, 2000);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(typePhrase, 500);
+    } else {
+        setTimeout(typePhrase, isDeleting ? 50 : 100);
+    }
+}
+
+typePhrase();
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+        navbar.style.top = '-80px';
+    } else {
+        navbar.style.top = '0';
+    }
+    lastScrollTop = scrollTop;
+});
+
+// Skill progress animation
+const skillBars = document.querySelectorAll('.skill-progress');
+
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.width = entry.target.getAttribute('data-progress');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+skillBars.forEach(bar => {
+    observer.observe(bar);
+});
+
+// Form submission
+const contactForm = document.querySelector('#contact form');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Here you would typically send the form data to a server
+    // For this example, we'll just log it to the console
+    const formData = new FormData(contactForm);
+    console.log('Form submitted with data:', Object.fromEntries(formData));
+    contactForm.reset();
+    alert('Thank you for your message! I\'ll get back to you soon.');
+});

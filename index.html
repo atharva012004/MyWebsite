@@ -1,333 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta name="google-site-verification" content="Z0psX-toFBZUsk2ekFBW6HrhdKNyqmm-PBhnZXDn2nM" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atharva Shihurkar</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./styles.css">
-  
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
- </head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-#c3bfbf bg-#c3bfbf">
-    <a class="navbar-brand" href="#">Atharva</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="itemnav">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <li class="itemnav">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="itemnav">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="itemnav">
-          <a class="nav-link" href="#qualifications">Qualifications</a>
-        </li>
-        <li class="itemnav">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-        <!-- <li>
-          <a href="#"></a>
-          <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode</button> -->
-  </nav>
-  </li>
-  </ul>
-  </div>
-  <script>
-    function toggleDarkMode() {
-      const body = document.body;
-      body.classList.toggle("dark-mode");
-    }
-  </script>
-
-  <!-- Home Section -->
-  <section id="home">
-    <div class="homecontainer">
-      <h1 id="head">Hi!✌️ Myself Atharva</h1>
-      <div class="myself">
-        <img src="../Images/me.png" type="video/mp4" id="gif">
-        <div id="text-container">
-          <h1 id="typing-text">I'm <span class="text"></span></h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva Shihurkar - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <nav class="bg-blue-600 text-white fixed w-full z-10 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold">Atharva</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#qualifications" class="nav-link">Qualifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="md:hidden" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
+    </nav>
 
-        <script>
-          // const words = ["I'm an Undergraduate student with a desire to learn and grow.", "I'm a Quick learner.", "Cricket 🏏 & Football ⚽️ Enthusiast.", "&", "Music Lover 🎶"];
-          // const typingTextElement = document.getElementById('typing-text');
-
-          // let currentWordIndex = 0;
-          // let currentWord = '';
-          // let isDeleting = false;
-
-          // function type() {
-          //   const word = words[currentWordIndex];
-
-          //   if (isDeleting) {
-          //     currentWord = word.substring(0, currentWord.length - 1);
-          //   } else {
-          //     currentWord = word.substring(0, currentWord.length + 1);
-          //   }
-
-          //   typingTextElement.textContent = currentWord;
-
-          //   if (!isDeleting && currentWord === word) {
-          //     isDeleting = true;
-          //     setTimeout(type, 1000);
-          //   } else if (isDeleting && currentWord === '') {
-          //     isDeleting = false;
-          //     currentWordIndex++;
-          //     if (currentWordIndex === words.length) {
-          //       currentWordIndex = 0;
-          //     }
-          //     setTimeout(type, 500);
-          //   } else {
-          //     const typingSpeed = isDeleting ? 50 : 100;
-          //     setTimeout(type, typingSpeed);
-          //   }
-          // }
-
-          // document.addEventListener('DOMContentLoaded', type);
-          var typed = new Typed(".text",{
-            strings:["an Undergraduate student with a desire to learn and grow.", "a Quick learner.", "also a passionate Cricket 🏏 & Football ⚽️ Enthusiast."],
-            typeSpeed:60,
-            backSpeed:70,
-            backDelay:100,
-            loop:true
-          });
-        </script>
-      </div>
-
-  </section>
-
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="content">
-        <img src="../Images/ph.jpg" id="img1">
-        <p class="dark-mode-content">
-          Hello! Myself Atharva Shihurkar & I'm an undergraduate student👨‍💻 seeking a lucrative IT career with a
-          strong
-          ambition to continuously learn and grow. With a strong foundation in programming languages like C, HTML, and
-          CSS, I've also exceled in various technologies like Microsoft Word, PowerPoint, and Excel. In my free time, I
-          enjoy playing sports like cricket🏏 and football⚽️, which instill values of collaboration, teamwork, strategic
-          thinking, and adaptation. I also enjoys listening to music🎵 and reading science fiction books📖.
-        </p>
-      </div>
+    <div class="mobile-menu hidden md:hidden">
+        <a href="#home" class="block py-2 px-4 text-sm hover:bg-blue-700">Home</a>
+        <a href="#about" class="block py-2 px-4 text-sm hover:bg-blue-700">About</a>
+        <a href="#skills" class="block py-2 px-4 text-sm hover:bg-blue-700">Skills</a>
+        <a href="#qualifications" class="block py-2 px-4 text-sm hover:bg-blue-700">Qualifications</a>
+        <a href="#contact" class="block py-2 px-4 text-sm hover:bg-blue-700">Contact</a>
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section class="skills section" id="skills">
-    <h2 class="section_title">Skills</h2>
-    <h3 class="techskill">My Tech Skills</h3>
-    <!-- <span class="section_subtitle">My Technical Skills</span> -->
-    <div class="skills_container container grid">
-      <!-- Skill Set 1 -->
-      <div class="skill skills_content skills_open">
-        <div class="skills_header">
-          <i class="uil uil-arrow skills_icon"></i>
-
-          <div>
-            <h2 id="skills_title">Languages-</h2>
-          </div>
-
-          <i class="uil uil-angle-down skills_arrow"></i>
-        </div>
-
-        <div class="skills_list grid">
-
-          <div class="skills_data">
-            <div class="skills_titles">
-              <span class="single_skill_icon">
-                <img class="img-icon" src="../Images/c-plus-plus-logo-24.png" alt="">
-              </span>
-              <h3 class="skills_name">C++ Language</h3>
+    <main>
+        <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 text-white">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4 animate-fade-in-down">Hi!✌️ I'm Atharva</h1>
+                <div id="typing-text" class="text-3xl mb-8 h-12"></div>
+                <img src="./Images/me.png" alt="Atharva Shihurkar" class="w-64 h-64 mx-auto rounded-full object-cover shadow-lg animate-float">
             </div>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 70%;"></div>
-            </div>
-          </div>
+        </section>
 
-          <div class="skills_data">
-            <div class="skills_titles">
-              <span class="single_skill_icon">
-                <img class="img-icon" src="../Images/html5-logo-24.png" alt="">
-              </span>
-              <h3 class="skills_name">HTML</h3>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 90%;"></div>
-            </div>
-            <div class="skills_bar">
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon">
-                  <img class="img-icon" src="../Images/css3-logo-24.png" alt="">
-                </span>
-                <h3 class="skills_name">CSS</h3>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-level" style="width: 80%;"></div>
-              </div>
-              <div class="skills_bar">
-              </div>
-
-              <!-- Skill Set 2 -->
-              <div class="skill skills_content">
-                <div class="skills_header">
-                  <i class="uil uil-brackets-curly skills_icon"></i>
-
-                  <div>
-                    <h2 id="skills_title1"> Frameworks & Libraries -</h2>
-                  </div>
-
-                  <i class="uil uil-angle-down skills_arrow"></i>
-                </div>
-
-
-
-                <div class="skills_data">
-                  <div class="skills_titles">
-                    <span class="single_skill_icon">
-                      <img class="img-icon" src="../Images/bootstrap-logo-24.png" alt="">
-                    </span>
-                    <h3 class="skills_name">Bootstrap</h3>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-level" style="width: 70%;"></div>
-                  </div>
-                  <div class="skills_bar">
-                  </div>
-
-                  <!-- Skill Set 3 -->
-                  <div class="skill skills_content">
-                    <div class="skills_header">
-                      <i class="uil uil-wrench skills_icon"></i>
-
-                      <div>
-                        <h2 id="skills_title2">Tools -</h2>
-                      </div>
-
-                      <i class="uil uil-angle-down skills_arrow"></i>
+        <section id="about" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
+                <div class="flex flex-wrap items-center">
+                    <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                        <img src="../Images/ph.jpg" alt="Atharva Shihurkar" class="rounded-full w-64 h-64 mx-auto object-cover shadow-lg">
                     </div>
+                    <div class="w-full md:w-2/3">
+                        <p class="text-lg leading-relaxed">
+                            Hello! I'm Atharva Shihurkar, an undergraduate student👨‍💻 passionate about IT and constantly eager to learn and grow. With a strong foundation in programming languages like C, HTML, and CSS, I've also excelled in various technologies such as Microsoft Word, PowerPoint, and Excel. In my free time, I enjoy playing sports like cricket🏏 and football⚽️, which instill values of collaboration, teamwork, strategic thinking, and adaptation. I also enjoy listening to music🎵 and reading science fiction books📖.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="skills_data">
-                      <div class="skills_titles">
-                        <span class="single_skill_icon">
-                          <img class="img-icon" src="../Images/git-logo-24.png">
-                        </span>
-                        <h3 class="skills_name">Git</h3>
-                      </div>
-                      <div class="skill-bar">
-                        <div class="skill-level" style="width: 60%;"></div>
-                      </div>
-                      <div class="skills_bar">
-                      </div>
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-8 text-center">My Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="skill-card">
+                        <h3 class="text-2xl font-semibold mb-4">Languages</h3>
+                        <ul>
+                            <li class="skill-item">
+                                <span class="skill-name">C++</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">HTML</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">CSS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 class="text-2xl font-semibold mb-4">Frameworks & Libraries</h3>
+                        <ul>
+                            <li class="skill-item">
+                                <span class="skill-name">Bootstrap</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3 class="text-2xl font-semibold mb-4">Tools</h3>
+                        <ul>
+                            <li class="skill-item">
+                                <span class="skill-name">Git</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 60%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">VS Code</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">GitHub</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 60%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                      <div class="skills_data">
-                        <div class="skills_titles">
-                          <span class="single_skill_icon">
-                            <img class="img-icon" src="../Images/visual-studio-logo-24.png">
-                          </span>
-                          <h3 class="skills_name">VS Code</h3>
-                        </div>
-                        <div class="skill-bar">
-                          <div class="skill-level" style="width: 90%;"></div>
-                        </div>
-                        <div class="skills_bar">
-                        </div>
+        <section id="qualifications" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-8 text-center">Qualifications</h2>
+                <div class="flex flex-wrap justify-center">
+                    <div class="qualification-card">
+                        <img src="../Images/university%20logo.png" alt="University Logo" class="w-32 h-32 mx-auto mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Undergraduation</h3>
+                        <p class="text-lg mb-2">Mahakal Institute of Technology, Ujjain</p>
+                        <p class="text-gray-600">2022-2026</p>
+                    </div>
+                    <div class="qualification-card">
+                        <img src="../Images/school.png" alt="School Logo" class="w-32 h-32 mx-auto mb-4">
+                        <h3 class="text-2xl font-semibold mb-2">Secondary Education</h3>
+                        <p class="text-lg mb-2">St. Joseph's Co-Ed Ser-Sec School, Bhopal</p>
+                        <p class="text-gray-600">2008-2021</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div class="skills_data">
-                          <div class="skills_titles">
-                            <span class="single_skill_icon">
-                              <img class="img-icon" src="../Images/github-logo-24 (1).png">
-                            </span>
-                            <h3 class="skills_name">Git Hub</h3>
-                          </div>
-                          <div class="skill-bar">
-                            <div class="skill-level" style="width: 60%;"></div>
-                          </div>
-                          <div class="skills_bar">
-                          </div>
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-8 text-center">Contact Me</h2>
+                <form class="max-w-lg mx-auto">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 
-  </section>
-
-  <!-- Qualifications Section -->
-  <section id="qualifications">
-    <section class="qualification-section">
-      <h2>Qualifications</h2>
-      <div class="qualification">
-        <img src="../Images/university logo.png" alt="Qualification 1">
-        <h3>Undergraduation</h3>
-        <p>Mahakal Instiute Of Technology, Ujjain.</p>
-        <p>2022-2026</p>
+    <footer class="bg-blue-600 text-white py-6">
+      <div class="container mx-auto px-6 flex flex-wrap justify-between items-center">
+          <div class="w-full md:w-1/2 text-center md:text-left">
+              <p>&copy; 2024 Atharva Shihurkar. All rights reserved.</p>
+          </div>
+          <div class="w-full md:w-1/2 text-center md:text-right mt-4 md:mt-0">
+              <a href="https://www.instagram.com/atharva_shihurkar_7/" class="mx-2 hover:text-blue-200 transition duration-300">
+                  <i class="fab fa-instagram fa-lg"></i>
+              </a>
+              <a href="https://github.com/atharva012004" class="mx-2 hover:text-blue-200 transition duration-300">
+                  <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/atharva-shihurkar-758ba325b/" class="mx-2 hover:text-blue-200 transition duration-300">
+                  <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+          </div>
       </div>
-      <div class="qualification">
-        <img src="../Images/school.png" alt="Qualification 2">
-        <h3>Secondary Education</h3>
-        <p>St. Joseph's Co-Ed Ser-Sec School, Bhopal.</p>
-        <p>2008-2021</p>
-      </div>
-      <!-- Add more qualification divs as needed -->
-    </section>
-  </section>
-  <!-- Contact Section -->
-  <section id="contact" class="py-5">
-    <div class="contactcontainer">
-      <h2>Contact Me</h2>
-      <form action="#" method="post">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
-<div class="footcontainer">
-  <footer class="py-3 my-4">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="foot-item"><a href="#about" class="nav-link px-2 text-body-secondary">About</a></li>
-      <li class="foot-item"><a href="#skills" class="nav-link px-2 text-body-secondary">Skills</a></li>
-      <li class="foot-item"><a href="#projects" class="nav-link px-2 text-body-secondary">Projects</a></li>
-      <li class="foot-item"><a href="#contact" class="nav-link px-2 text-body-secondary">Contact</a></li>
-    </ul>
-    <p class="text-center text-body-secondary">&copy; 2023 Atharva Shihurkar , All rights are reserved <a
-        href="https://www.instagram.com/atharva_shihurkar_7/"><img src="../Images/instagram-logo-24.png" width="40px" height="40px"
-          class="footlogo"></a>
-           <a href="https://github.com/atharva012004"><img src="../Images/github-logo-24 (1).png" width="40px" height="40px" id="footlogo2"></a> 
-          <a href="https://www.linkedin.com/in/atharva-shihurkar-758ba325b/"><img src="../Images/linkedin-square-logo-24.png" width="40px" height="40px" id="footlogo3"></a>
-    </p>
-    </ul>
   </footer>
 
+  <script src="script.js"></script>
+</body>
 </html>
