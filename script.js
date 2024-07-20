@@ -101,23 +101,16 @@ skillBars.forEach(bar => {
 });
 
 // Form submission handler
-const contactForm = document.getElementById('contact-form');
+const contactForm = document.querySelector('#contact form');
 
-contactForm.addEventListener('submit', async (e) => {
+contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+    // Here you would typically send the form data to a server
+    // For this example, we'll just log it to the console
     const formData = new FormData(contactForm);
-    const response = await fetch('/submit-form', {
-        method: 'POST',
-        body: formData
-    });
-    
-    if (response.ok) {
-        contactForm.reset();
-        alert('Thank you for your message! I\'ll get back to you soon.');
-    } else {
-        alert('There was an error submitting the form. Please try again.');
-    }
+    console.log('Form submitted with data:', Object.fromEntries(formData));
+    contactForm.reset();
+    alert('Thank you for your message! I\'ll get back to you soon.');
 });
 
 // Parallax effect for hero section
