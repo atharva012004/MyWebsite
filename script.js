@@ -1,6 +1,6 @@
 // Typing animation
 const typingText = document.getElementById('typing-text');
-const phrases = ["Web Developer", "Student", "Tech Enthusiast", "Football and Cricket lover"];
+const phrases = ["Software Developer", "Full-Stack Developer", "Tech Enthusiast", "Football and Cricket lover"];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
