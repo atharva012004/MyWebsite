@@ -108,7 +108,7 @@ body {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Hero Section */
+/* Hero Section - Fixed without parallax */
 .hero {
     height: 100vh;
     display: flex;
@@ -132,26 +132,44 @@ body {
     pointer-events: none;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
     z-index: 2;
     position: relative;
 }
 
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: clamp(150px, 20vw, 200px);
+    height: clamp(150px, 20vw, 200px);
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Resume Button Styles */
 .resume-button-container {
-    margin: 2rem 0;
+    margin: 1rem 0;
     z-index: 2;
     position: relative;
 }
@@ -161,13 +179,13 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 35px;
+    padding: clamp(12px, 3vw, 15px) clamp(25px, 5vw, 35px);
     background: linear-gradient(45deg, #ff6b6b, #ee5a52, #ff4757);
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 16px);
     box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden;
@@ -424,8 +442,12 @@ body {
 
 /* Typing animation */
 #typing-container {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin-top: 1rem;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .typing-cursor {
@@ -789,22 +811,9 @@ footer {
         transition-delay: 0.5s;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    #typing-container {
-        font-size: 1.2rem;
-    }
-
-    .profile-image {
-        width: 150px;
-        height: 150px;
-    }
-
-    .resume-btn {
-        padding: 12px 25px;
-        font-size: 14px;
+    .hero-content {
+        padding: 1rem;
+        gap: 1rem;
     }
 
     .about-content {
@@ -814,6 +823,27 @@ footer {
 
     .about-image {
         margin-bottom: 2rem;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        gap: 0.8rem;
+    }
+
+    .about-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 15px;
     }
 }
 
