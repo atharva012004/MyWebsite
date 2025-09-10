@@ -225,24 +225,9 @@ function showSuccessMessage() {
     }, 3000);
 }
 
-// Enhanced parallax effect for hero section
-const heroSection = document.querySelector('.hero');
-const profileImage = document.querySelector('.profile-image');
-
-window.addEventListener('scroll', () => {
-    const scrollPosition = window.pageYOffset;
-    const windowHeight = window.innerHeight;
-    
-    if (heroSection && scrollPosition < windowHeight) {
-        const parallaxSpeed = scrollPosition * 0.5;
-        heroSection.style.transform = `translateY(${parallaxSpeed}px)`;
-    }
-    
-    if (profileImage && scrollPosition < windowHeight) {
-        const imageParallax = scrollPosition * 0.2;
-        profileImage.style.transform = `translateY(${imageParallax}px)`;
-    }
-});
+// REMOVED: Hero section parallax effect that caused floating behavior
+// The previous code that moved hero section and profile image during scroll has been removed
+// This ensures the hero section stays fixed and doesn't float down when scrolling
 
 // Animate on scroll with intersection observer
 const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
@@ -470,10 +455,10 @@ function debounce(func, wait) {
     };
 }
 
-// Apply debounced scroll handlers
+// Apply debounced scroll handlers for better performance
 const debouncedScrollHandler = debounce(() => {
-    // Your scroll handling code here
-}, 10);
+    // Optimized scroll handling can be added here if needed
+}, 16); // 60fps
 
 // Add fade-in animation styles
 const fadeAnimationStyle = document.createElement('style');
