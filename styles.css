@@ -8,6 +8,9 @@
     --white: #ffffff;
     --gray-light: #e2e8f0;
     --gray-dark: #4a5568;
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
 * {
@@ -79,6 +82,8 @@ body {
 .burger {
     display: none;
     cursor: pointer;
+    flex-direction: column;
+    z-index: 1001;
 }
 
 .burger div {
@@ -87,6 +92,20 @@ body {
     background-color: var(--text-color);
     margin: 5px;
     transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Burger Animation */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Hero Section */
@@ -98,11 +117,26 @@ body {
     text-align: center;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="0.5" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="90" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
 }
 
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    z-index: 2;
+    position: relative;
 }
 
 .profile-image {
@@ -112,6 +146,165 @@ body {
     object-fit: cover;
     margin-top: 2rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Resume Button Styles */
+.resume-button-container {
+    margin: 2rem 0;
+    z-index: 2;
+    position: relative;
+}
+
+.resume-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52, #ff4757);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.resume-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.resume-btn:hover::before {
+    left: 100%;
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(45deg, #ff5252, #e53935, #f44336);
+}
+
+.resume-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.btn-text {
+    margin-right: 8px;
+    transition: margin-right 0.3s ease;
+}
+
+.resume-btn:hover .btn-text {
+    margin-right: 15px;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.resume-btn:hover .btn-icon {
+    transform: translateY(2px);
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-3px);
+    }
+    80% {
+        transform: translateY(-1px);
+    }
+}
+
+.btn-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.btn-particles span {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: particle-float 2s infinite ease-in-out;
+    opacity: 0;
+}
+
+.btn-particles span:nth-child(1) {
+    width: 4px;
+    height: 4px;
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.btn-particles span:nth-child(2) {
+    width: 3px;
+    height: 3px;
+    top: 60%;
+    left: 80%;
+    animation-delay: 0.5s;
+}
+
+.btn-particles span:nth-child(3) {
+    width: 5px;
+    height: 5px;
+    top: 80%;
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.btn-particles span:nth-child(4) {
+    width: 2px;
+    height: 2px;
+    top: 30%;
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.btn-particles span:nth-child(5) {
+    width: 4px;
+    height: 4px;
+    top: 70%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+@keyframes particle-float {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0);
+    }
+}
+
+.resume-btn:hover .btn-particles span {
+    animation-play-state: running;
 }
 
 /* Glitch effect */
@@ -481,8 +674,6 @@ form button:hover {
     transform: translateY(-2px);
 }
 
-
-
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -509,29 +700,111 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .burger {
-        display: block;
+        display: flex;
     }
 
     .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 22vh;
-        top: 8vh;
-        background-color: var(--white);
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(135deg, rgba(52, 152, 219, 0.98), rgba(41, 128, 185, 0.98));
+        backdrop-filter: blur(20px);
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        justify-content: center;
+        transition: right 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 999;
     }
 
     .nav-links li {
+        margin: 1.5rem 0;
         opacity: 0;
+        transform: translateX(50px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links .nav-link {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nav-links .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    .nav-links .nav-link:hover::before {
+        left: 100%;
+    }
+
+    .nav-links .nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
 
     .nav-active {
-        transform: translateX(0%);
+        right: 0 !important;
+    }
+
+    .nav-active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .nav-active li:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .nav-active li:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .nav-active li:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .nav-active li:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+    .nav-active li:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #typing-container {
+        font-size: 1.2rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .resume-btn {
+        padding: 12px 25px;
+        font-size: 14px;
     }
 
     .about-content {
